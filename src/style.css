@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+a {
+  color: #21130e;
+}
+
 main {
   padding: 0 10vw;
 }
@@ -93,26 +97,33 @@ figcaption time {
   font-family: cursive;
   text-transform: capitalize;
   text-align: center;
-  margin-top: -97px;
+  margin-top: -65px;
 }
 
 em {
   font-family: monospace;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 blockquote {
   font-family: cursive;
   background-color: dimgray;
   padding: 40px;
-  margin: 41px 0;
+  margin: 100px 0 41px;
   transform: skew(-5deg, -3deg);
   border-radius: 30px;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   min-height: 200px;
 }
 
@@ -124,10 +135,15 @@ time {
   text-align: right;
 }
 
+.mid-block {
+  position: relative;
+  height: 22%;
+  margin-top: 129px;
+}
+
 .circle {
   width: 30px;
   height: 30px;
-  position: relative;
   background: #fff;
   border-radius: 50%;
   border: 5px solid #b1b1b1;
@@ -135,10 +151,12 @@ time {
 
 time {
   padding-right: 25px;
+  width: 20%;
 }
 
 .tribute-info-by-date {
   padding-left: 25px;
+  width: 60%;
 }
 
 .circle::after {
@@ -146,20 +164,20 @@ time {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 5px;
-  top: 5px;
+  left: 10px;
+  top: 10px;
   border-radius: 50%;
   background: #b1b1b1;
 }
 
 .circle::before {
   content: "";
-  height: calc(100% + 150px);
+  height: calc(100% + 100px);
   width: 0;
   border-left: 2px solid white;
   position: absolute;
-  top: 27px;
-  left: 14px;
+  top: 33px;
+  left: 18px;
 }
 
 footer {
