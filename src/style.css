@@ -21,7 +21,7 @@ main {
 h1,
 h2 {
   font-family: "Merienda", cursive;
-  margin: 15px;
+  margin: 25px 15px 15px;
 }
 
 #title {
@@ -102,7 +102,7 @@ figcaption time {
 
 em {
   font-family: monospace;
-  margin-top: 30px;
+  margin-top: 20px;
   display: inline-block;
 }
 
@@ -110,19 +110,20 @@ blockquote {
   font-family: cursive;
   background-color: dimgray;
   padding: 40px;
-  margin: 100px 0 41px;
+  margin: 70px 0 41px;
   transform: skew(-5deg, -3deg);
   border-radius: 30px;
 }
 
 ul {
   padding: 0;
+  margin-top: 100px;
 }
 
 li {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   position: relative;
   min-height: 200px;
 }
@@ -137,8 +138,6 @@ time {
 
 .mid-block {
   position: relative;
-  height: 22%;
-  margin-top: 129px;
 }
 
 .circle {
@@ -172,12 +171,12 @@ time {
 
 .circle::before {
   content: "";
-  height: calc(100% + 100px);
+  height: 100%;
   width: 0;
   border-left: 2px solid white;
   position: absolute;
   top: 33px;
-  left: 18px;
+  left: 19px;
 }
 
 footer {
