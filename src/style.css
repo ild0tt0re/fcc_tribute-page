@@ -208,16 +208,6 @@ address {
   }
 
   .circle::before {
-    content: "";
-    height: calc(100% + 137px);
-    width: 0;
-    border-left: 2px solid white;
-    position: absolute;
-    top: 24px;
-    left: 14px;
-  }
-
-  .circle::before {
     height: calc(100% + 130px);
     top: 33px;
     left: 19px;
