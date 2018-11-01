@@ -1,6 +1,11 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 @import url("https://fonts.googleapis.com/css?family=Averia+Sans+Libre:300i|Merienda:700");
 
+:root {
+  --hexagon-pseudo-elem-v-distance: -75px;
+  --hexagon-vertical-border: 150px solid transparent;
+}
+
 body {
   background-color: #545454;
   color: #e2e1e1;
@@ -10,12 +15,12 @@ body {
   margin: 0;
 }
 
-a {
-  color: #21130e;
+.page-margin {
+  padding: 0 10vw;
 }
 
-main {
-  padding: 0 10vw;
+a {
+  color: #21130e;
 }
 
 h1,
@@ -41,23 +46,23 @@ h2 {
 #hexagon:before {
   content: "";
   position: absolute;
-  top: -75px;
+  top: var(--hexagon-pseudo-elem-v-distance);
   left: 0;
   width: 0;
   height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
+  border-left: var(--hexagon-vertical-border);
+  border-right: var(--hexagon-vertical-border);
   border-bottom: 75px solid #1b1a1a;
 }
 #hexagon:after {
   content: "";
   position: absolute;
-  bottom: -75px;
+  bottom: var(--hexagon-pseudo-elem-v-distance);
   left: 0;
   width: 0;
   height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
+  border-left: var(--hexagon-vertical-border);
+  border-right: var(--hexagon-vertical-border);
   border-top: 75px solid #9e9e9e;
 }
 
@@ -111,8 +116,6 @@ blockquote {
   background-color: dimgray;
   padding: 40px;
   margin: 70px 0 41px;
-  transform: skew(-5deg, -3deg);
-  border-radius: 30px;
 }
 
 ul {
@@ -141,8 +144,8 @@ time {
 }
 
 .circle {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: #fff;
   border-radius: 50%;
   border: 5px solid #b1b1b1;
@@ -154,15 +157,15 @@ time {
 }
 
 .tribute-info-by-date {
-  padding-left: 25px;
+  margin-left: 25px;
   width: 60%;
 }
 
 .circle::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  height: 10px;
+  width: 10px;
   left: 10px;
   top: 10px;
   border-radius: 50%;
@@ -171,12 +174,12 @@ time {
 
 .circle::before {
   content: "";
-  height: calc(100% + 130px);
+  height: calc(100% + 137px);
   width: 0;
   border-left: 2px solid white;
   position: absolute;
-  top: 33px;
-  left: 19px;
+  top: 24px;
+  left: 14px;
 }
 
 footer {
@@ -195,4 +198,44 @@ footer {
 address {
   text-align: right;
   padding: 1px 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  blockquote {
+    transform: skew(-5deg, -3deg);
+    border-radius: 30px;
+    margin: 70px 10vw 41px;
+  }
+
+  .circle::before {
+    content: "";
+    height: calc(100% + 137px);
+    width: 0;
+    border-left: 2px solid white;
+    position: absolute;
+    top: 24px;
+    left: 14px;
+  }
+
+  .circle::before {
+    height: calc(100% + 130px);
+    top: 33px;
+    left: 19px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .circle::after {
+    height: 20px;
+    width: 20px;
+  }
+
+  .tribute-info-by-date {
+    padding: 10px;
+    background-color: dimgray;
+    transform: skew(10deg, 0deg);
+  }
 }
