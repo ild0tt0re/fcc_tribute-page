@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9ab4e45d-26ad-4111-927a-4f667ff46784/deploy-status)](https://app.netlify.com/sites/fcc-rwdp-tributepage/deploys)
+
 # RESPONSIVE WEB DESIGN PROJECT | TRIBUTE PAGE
 ![Project-preview](tribute-page-preview.png)
 > This is the first project of _freeCodeCamp "RESPONSIVE WEB DESIGN" Certification_
